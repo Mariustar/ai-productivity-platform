@@ -7,8 +7,8 @@ export default function Home() {
 
   useEffect(() => {
     fetch(process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000")
-      .then(res => res.json())
-      .then(data => setMsg(data.message))
+      .then((res) => res.json())
+      .then((data) => setMsg(data.message))
       .catch(() => setMsg("Could not reach backend"));
   }, []);
 
