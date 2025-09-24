@@ -1,0 +1,16 @@
+{
+  "name": "ai-productivity-platform",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"pnpm --filter backend dev\" \"pnpm --filter frontend dev\"",
+    "install:all": "pnpm -w install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
